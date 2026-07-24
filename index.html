@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="bn" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIHAD BOOM VIDEO - Premium YouTube Shorts & Video Hub</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            400: '#facc15',
+                            500: '#eab308',
+                            600: '#ca8a04',
+                            DEFAULT: '#d4af37',
+                            light: '#ffd700',
+                            dark: '#aa8c2c'
+                        },
+                        darkBg: '#0b0b0b',
+                        cardBg: '#141414',
+                        cardBorder: '#262626'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', 'Hind Siliguri', sans-serif;
+            background-color: #0b0b0b;
+            color: #f3f4f6;
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #ffd700 0%, #d4af37 50%, #aa8c2c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-gradient-bg {
+            background: linear-gradient(135deg, #ffd700 0%, #d4af37 50%, #aa8c2c 100%);
+        }
+        .gold-glow {
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
+            animation: pulse-glow 3s infinite alternate;
+        }
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 15px rgba(212, 175, 55, 0.2); }
+            100% { box-shadow: 0 0 35px rgba(255, 215, 0, 0.5); }
+        }
+        .gold-border {
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            transition: all 0.3s ease;
+        }
+        .gold-border:hover {
+            border-color: #ffd700;
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.25);
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-gray-100 min-h-screen flex flex-col selection:bg-gold selection:text-black">
+
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 bg-darkBg/90 backdrop-blur-md border-b border-neutral-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo with Golden Glow & Animation -->
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <div class="w-11 h-11 rounded-full gold-gradient-bg gold-glow flex items-center justify-center text-black font-bold text-xl group-hover:scale-110 transition duration-300">
+                    <i class="fa-solid fa-bolt-lightning text-black animate-pulse"></i>
+                </div>
+                <div>
+                    <span class="text-lg sm:text-2xl font-extrabold tracking-wider gold-gradient-text drop-shadow-[0_2px_10px_rgba(255,215,0,0.3)]">MIHAD <span class="text-white">BOOM VIDEO</span></span>
+                    <p class="text-[10px] text-gold tracking-widest uppercase font-semibold">Viral Video Assets Hub</p>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center space-x-8 font-medium">
+                <a href="index.html" class="text-gold font-semibold transition hover:text-gold-light flex items-center gap-2"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="demo.html" class="text-gray-300 hover:text-gold transition flex items-center gap-2"><i class="fa-solid fa-video"></i> Demo Video</a>
+                <a href="free.html" class="text-gray-300 hover:text-gold transition flex items-center gap-2"><i class="fa-solid fa-gift"></i> Free Service</a>
+                <a href="#contact" class="text-gray-300 hover:text-gold transition flex items-center gap-2"><i class="fa-solid fa-headset"></i> Contact</a>
+            </nav>
+
+            <!-- WhatsApp CTA Button -->
+            <div class="hidden sm:flex items-center space-x-4">
+                <a href="https://wa.me/8801609371023?text=Hi%20Mihad%20Bhai,%20I%20want%20to%20buy%20Boom%20Shorts%20Videos!" target="_blank" class="px-5 py-2.5 rounded-xl gold-gradient-bg text-black font-bold text-sm shadow-lg shadow-gold/20 hover:opacity-90 transition flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Direct
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="md:hidden text-gold hover:text-gold-light focus:outline-none text-2xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-cardBg border-b border-neutral-800 px-6 py-4 space-y-3">
+            <a href="index.html" class="block text-gold font-semibold py-2"><i class="fa-solid fa-house mr-2"></i> Home</a>
+            <a href="demo.html" class="block text-gray-300 hover:text-gold py-2"><i class="fa-solid fa-video mr-2"></i> Demo Video</a>
+            <a href="free.html" class="block text-gray-300 hover:text-gold py-2"><i class="fa-solid fa-gift mr-2"></i> Free Service</a>
+            <a href="#contact" class="block text-gray-300 hover:text-gold py-2"><i class="fa-solid fa-headset mr-2"></i> Contact</a>
+            <div class="pt-2">
+                <a href="https://wa.me/8801609371023?text=Hi%20Mihad%20Bhai,%20I%20want%20to%20buy%20Boom%20Shorts%20Videos!" target="_blank" class="w-full text-center block py-2.5 rounded-xl gold-gradient-bg text-black font-bold text-sm">
+                    <i class="fa-brands fa-whatsapp mr-2"></i> WhatsApp Direct
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden py-16 sm:py-24 bg-gradient-to-b from-darkBg via-[#121212] to-darkBg border-b border-neutral-900">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#d4af37_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold/10 border border-gold/30 text-gold text-xs sm:text-sm font-semibold mb-6">
+                <i class="fa-solid fa-fire text-gold animate-bounce"></i> 100% Viral Guaranteed & Copyright Free Shorts
+            </div>
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+                Welcome to <span class="gold-gradient-text drop-shadow-[0_0_20px_rgba(255,215,0,0.4)]">MIHAD BOOM VIDEO</span> <br>Grow Your Channel Instantly!
+            </h1>
+            <p class="max-w-2xl mx-auto text-gray-300 text-sm sm:text-base mb-8">
+                Ready-to-upload high retention viral shorts, professional courses, and video bundles to explode your YouTube channel growth without showing your face!
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#boom-shorts-section" class="px-8 py-3.5 rounded-xl gold-gradient-bg text-black font-bold text-sm shadow-xl shadow-gold/20 hover:scale-105 transition flex items-center gap-2">
+                    <i class="fa-solid fa-bolt"></i> Explore Boom Shorts
+                </a>
+                <a href="https://wa.me/8801609371023?text=Hi%20Mihad%20Bhai,%20I%20have%20a%20question." target="_blank" class="px-8 py-3.5 rounded-xl bg-neutral-900 border border-gold/40 text-gold font-bold text-sm hover:bg-gold/10 transition flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+                </a>
+            </div>
+
+            <!-- Stats Banner -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mt-16 pt-8 border-t border-neutral-800">
+                <div class="p-4 rounded-xl bg-cardBg border border-neutral-800">
+                    <h3 class="text-2xl sm:text-3xl font-bold gold-gradient-text">100%</h3>
+                    <p class="text-xs text-gray-400 mt-1">Viral Guarantee</p>
+                </div>
+                <div class="p-4 rounded-xl bg-cardBg border border-neutral-800">
+                    <h3 class="text-2xl sm:text-3xl font-bold gold-gradient-text">Instant</h3>
+                    <p class="text-xs text-gray-400 mt-1">Google Drive Delivery</p>
+                </div>
+                <div class="p-4 rounded-xl bg-cardBg border border-neutral-800">
+                    <h3 class="text-2xl sm:text-3xl font-bold gold-gradient-text">1,000+</h3>
+                    <p class="text-xs text-gray-400 mt-1">Happy Creators</p>
+                </div>
+                <div class="p-4 rounded-xl bg-cardBg border border-neutral-800">
+                    <h3 class="text-2xl sm:text-3xl font-bold gold-gradient-text">24/7</h3>
+                    <p class="text-xs text-gray-400 mt-1">WhatsApp Support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-20 w-full">
+
+        <!-- CATEGORY 1: Boom Shorts Video (4 Specific Cards) -->
+        <section id="boom-shorts-section">
+            <div class="mb-8 pb-4 border-b border-neutral-800 text-center sm:text-left flex flex-col sm:flex-row sm:items-center justify-between">
+                <div>
+                    <span class="text-gold text-xs font-bold uppercase tracking-widest block mb-1"><i class="fa-solid fa-bolt text-gold"></i> Main Category</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold gold-gradient-text">Boom Shorts Video</h2>
+                </div>
+                <span class="mt-2 sm:mt-0 px-4 py-1.5 rounded-full bg-gold/10 border border-gold/30 text-gold text-xs font-bold inline-block">
+                    <i class="fa-solid fa-fire mr-1"></i> Instant Google Drive Link
+                </span>
+            </div>
+
+            <!-- 4 Service Cards Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Card 1: 60 pis Boom shorts Video (1200 Tk) -->
+                <div class="bg-cardBg rounded-2xl p-6 gold-border flex flex-col justify-between relative overflow-hidden group">
+                    <div class="absolute -right-12 -top-12 w-28 h-28 bg-gold/10 rounded-full blur-xl group-hover:bg-gold/20 transition"></div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-md bg-emerald-500/20 text-emerald-400 text-xs font-bold uppercase border border-emerald-500/30">Most Popular</span>
+                            <span class="text-xs text-gold font-semibold"><i class="fa-solid fa-video mr-1"></i> 60 Pcs</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">60 Pcs Boom Shorts Video</h3>
+                        <p class="text-white text-xs mb-4 leading-relaxed bg-neutral-900/80 p-3 rounded-xl border border-neutral-800">
+                            ১০০% ভাইরাল ভিডিও দেওয়া হবে। আপনার হাজার মানুষ ভিডিও নিয়ে চ্যানেল মনিটাইজ করতে, আপনি এখনি নিতে পারেন। ভিডিও ভাইরাল করার সব গাইডলাইন আমরা দেব।
+                        </p>
+                        <ul class="space-y-2 text-xs text-gray-300 mb-6">
+                            <li><i class="fa-solid fa-check text-gold mr-2"></i> 60 High Quality Viral Shorts</li>
+                            <li><i class="fa-solid fa-check text-gold mr-2"></i> Full Monetization Support</li>
+                            <li><i class="fa-solid fa-check text-gold mr-2"></i> Complete Viral Guideline PDF</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4 pt-4 border-t border-neutral-800">
+                            <div>
+                                <span class="text-xs text-gray-400 block">Regular Price: <span class="line-through">1,800 TK</span></span>
+                                <span class="text-2xl font-extrabold gold-gradient-text">1200 TK</span>
+                            </div>
+                            <span class="px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-[10px] font-bold">In Stock</span>
+                        </div>
+                        <button onclick="openCheckout('60 Pcs Boom Shorts Video', '1200 TK')" class="w-full py-3 rounded-xl gold-gradient-bg text-black font-bold text-sm shadow-lg shadow-gold/10 hover:opacity-90 transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-cart-shopping"></i> Buy Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 2: 30 pis Boom shorts Video (700 Tk) -->
+                <div class="bg-cardBg rounded-2xl p-6 gold-border flex flex-col justify-between relative overflow-hidden group">
+                    <div class="absolute -right-12 -top-12 w-28 h-28 bg-gold/10 rounded-full blur-xl group-hover:bg-gold/20 transition"></div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-md bg-emerald-500/20 text-emerald-400 text-xs font-bold uppercase border border-emerald-500/30">Popular</span>
+                            <span class="text-xs text-gold font-semibold"><i class="fa-solid fa-video mr-1"></i> 30 Pcs</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">30 Pcs Boom Shorts Video</h3>
+                        <p class="text-white text-xs mb-4 leading-relaxed bg-neutral-900/80 p-3 rounded-xl border border-neutral-800">
+                            চ্যানেল দ্রুত গ্রো করার জন্য ৩০টি প্রিমিয়াম ভাইরাল শর্টস। সাথে থাকছে ফুল গাইডলাইন এবং ইনস্ট্যান্ট গুগল ড্রাইভ এক্সেস।
+                        </p>
+                        <ul class="space-y-2 text-xs text-gray-300 mb-6">
+                            <li><i class="fa-solid fa-check text-gold mr-2"></i> 30 Viral Shorts Bundle</li>
+                            <li><i class="fa-solid fa-check text-gold mr-2"></i> High Retention Edits</li>
+                            <li><i class="fa-solid fa-check text-gold mr-2"></i> Instant Download</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4 pt-4 border-t border-neutral-800">
+                            <div>
+                                <span class="text-xs text-gray-400 block">Regular Price: <span class="line-through">1,000 TK</span></span>
+                                <span class="text-2xl font-extrabold gold-gradient-text">700 TK</span>
+                            </div>
+                            <span class="px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-[10px] font-bold">In Stock</span>
+                        </div>
+                        <button onclick="openCheckout('30 Pcs Boom Shorts Video', '700 TK')" class="w-full py-3 rounded-xl gold-gradient-bg text-black font-bold text-sm shadow-lg shadow-gold/10 hover:opacity-90 transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-cart-shopping"></i> Buy Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 3: 15 pis Boom shorts Video (350 Tk) -->
+                <div class="bg-cardBg rounded-2xl p-6 gold-border flex flex-col justify-between relative overflow-hidden group">
+                    <div class="absolute -right-12 -top-12 w-28 h-28 bg-gold/10 rounded-full blur-xl group-hover:bg-gold/20 transition"></div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-md bg-emerald-500/20 text-emerald-400 text-xs font-bold uppercase border border-emerald-500/30">Viral</span>
+                            <span class="text-xs text-gold font-semibold"><i class="fa-solid fa-video mr-1"></i> 15 Pcs</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">15 Pcs Boom Shorts Video</h3>
+                        <p class="text-white text-xs mb-4 leading-relaxed bg-neutral-900/80 p-3 rounded-xl border border-neutral-800">
+                            টেস্ট করার জন্য বা ছোট পরিসরে চ্যানেল শুরু করার জন্য ১৫টি সেরা ভাইরাল শর্টসের বিশেষ বান্ডেল।
+                        </p>
+                        <ul class="space-y-2 text-xs text-gray-300 mb-6">
+                            <li><i class="fa-solid fa-check text-gold mr-2"></i> 15 Selected Shorts</li>
+                            <li><i class="fa-solid fa-check text-gold mr-2"></i> Budget Friendly</li>
+                            <li><i class="fa-solid fa-check text-gold mr-2"></i> Full Guidance</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4 pt-4 border-t border-neutral-800">
+                            <div>
+                                <span class="text-xs text-gray-400 block">Regular Price: <span class="line-through">600 TK</span></span>
+                                <span class="text-2xl font-extrabold gold-gradient-text">350 TK</span>
+                            </div>
+                            <span class="px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-[10px] font-bold">In Stock</span>
+                        </div>
+                        <button onclick="openCheckout('15 Pcs Boom Shorts Video', '350 TK')" class="w-full py-3 rounded-xl gold-gradient-bg text-black font-bold text-sm shadow-lg shadow-gold/10 hover:opacity-90 transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-cart-shopping"></i> Buy Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Card 4: 40 pis Boom shorts Video (500 Tk) [Most Popular with Fire Icon] -->
+                <div class="bg-cardBg rounded-2xl p-6 gold-border flex flex-col justify-between relative overflow-hidden group shadow-xl shadow-gold/10 ring-2 ring-gold/50">
+                    <div class="absolute -right-12 -top-12 w-28 h-28 bg-gold/20 rounded-full blur-xl group-hover:bg-gold/30 transition"></div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-md bg-emerald-500/20 text-emerald-400 text-xs font-bold uppercase border border-emerald-500/30 flex items-center gap-1">
+                                <i class="fa-solid fa-fire text-gold animate-bounce"></i> Most Popular 🔥
+                            </span>
+                            <span class="text-xs text-gold font-semibold"><i class="fa-solid fa-video mr-1"></i> 40 Pcs</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">40 Pcs Boom Shorts Video</h3>
+                        <p class="text-white text-xs mb-4 leading-relaxed bg-neutral-900/80 p-3 rounded-xl border border-neutral-800">
+                            সবচেয়ে বেশি বিক্রিত এবং জনপ্রিয় বান্ডেল! সবাই এই প্যাকেজটি নিতে সবচেয়ে বেশি পছন্দ করে। ইনস্ট্যান্ট ড্রাইভ লিংক।
+                        </p>
+                        <ul class="space-y-2 text-xs text-gray-300 mb-6">
+                            <li><i class="fa-solid fa-check text-gold mr-2"></i> 40 Ultra Viral Shorts</li>
+                            <li><i class="fa-solid fa-check text-gold mr-2"></i> Highest Demand Package</li>
+                            <li><i class="fa-solid fa-check text-gold mr-2"></i> Free Hashtag & SEO Guide</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4 pt-4 border-t border-neutral-800">
+                            <div>
+                                <span class="text-xs text-gray-400 block">Regular Price: <span class="line-through">900 TK</span></span>
+                                <span class="text-2xl font-extrabold gold-gradient-text">500 TK</span>
+                            </div>
+                            <span class="px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-[10px] font-bold">Best Value</span>
+                        </div>
+                        <button onclick="openCheckout('40 Pcs Boom Shorts Video', '500 TK')" class="w-full py-3 rounded-xl gold-gradient-bg text-black font-bold text-sm shadow-xl shadow-gold/20 hover:opacity-90 transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-cart-shopping"></i> Buy Now
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CATEGORY 2: Video Bundle (Long Videos / Bundles) -->
+        <section id="video-bundle-section">
+            <div class="mb-8 pb-4 border-b border-neutral-800 text-center sm:text-left flex flex-col sm:flex-row sm:items-center justify-between">
+                <div>
+                    <span class="text-gold text-xs font-bold uppercase tracking-widest block mb-1"><i class="fa-solid fa-film text-gold"></i> Category 2</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold gold-gradient-text">Video Bundle & Long Form</h2>
+                </div>
+                <span class="mt-2 sm:mt-0 text-xs text-gray-400">Image upload system ready for future additions</span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Bundle Card 1 -->
+                <div class="bg-cardBg rounded-2xl p-6 gold-border flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-md bg-gold/10 text-gold text-xs font-bold uppercase">Documentary</span>
+                            <span class="text-xs text-gray-400"><i class="fa-solid fa-cloud-arrow-down mr-1"></i> Google Drive</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">100+ Cashcow Long Videos Bundle</h3>
+                        <p class="text-gray-400 text-xs mb-4">Fully edited 8-15 minute documentary and history long videos ready for channel monetization.</p>
+                        <ul class="space-y-2 text-xs text-gray-300 mb-6">
+                            <li><i class="fa-solid fa-check text-gold mr-2"></i> 100+ Full HD Videos</li>
+                            <li><i class="fa-solid fa-check text-gold mr-2"></i> Professional Voiceovers</li>
+                            <li><i class="fa-solid fa-check text-gold mr-2"></i> Thumbnails Included</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4 pt-4 border-t border-neutral-800">
+                            <div>
+                                <span class="text-xs text-gray-400 block">Regular Price: <span class="line-through">1,500 TK</span></span>
+                                <span class="text-2xl font-extrabold gold-gradient-text">699 TK</span>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-bold">In Stock</span>
+                        </div>
+                        <button onclick="openCheckout('100+ Cashcow Long Videos', '699 TK')" class="w-full py-3 rounded-xl gold-gradient-bg text-black font-bold text-sm shadow-lg shadow-gold/10 hover:opacity-90 transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-cart-shopping"></i> Buy Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Bundle Card 2 -->
+                <div class="bg-cardBg rounded-2xl p-6 gold-border flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-md bg-gold/10 text-gold text-xs font-bold uppercase">Podcast Clips</span>
+                            <span class="text-xs text-gray-400"><i class="fa-solid fa-cloud-arrow-down mr-1"></i> Google Drive</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">250+ Podcast & Interview Long Clips</h3>
+                        <p class="text-gray-400 text-xs mb-4">Engaging podcast clips discussing business, psychology, and billionaire mindset.</p>
+                        <ul class="space-y-2 text-xs text-gray-300 mb-6">
+                            <li><i class="fa-solid fa-check text-gold mr-2"></i> 250+ High Retention Clips</li>
+                            <li><i class="fa-solid fa-check text-gold mr-2"></i> Color Graded & Captioned</li>
+                            <li><i class="fa-solid fa-check text-gold mr-2"></i> Instant Download</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4 pt-4 border-t border-neutral-800">
+                            <div>
+                                <span class="text-xs text-gray-400 block">Regular Price: <span class="line-through">1,200 TK</span></span>
+                                <span class="text-2xl font-extrabold gold-gradient-text">499 TK</span>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-bold">In Stock</span>
+                        </div>
+                        <button onclick="openCheckout('250+ Podcast Long Clips', '499 TK')" class="w-full py-3 rounded-xl gold-gradient-bg text-black font-bold text-sm shadow-lg shadow-gold/10 hover:opacity-90 transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-cart-shopping"></i> Buy Now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Bundle Card 3 -->
+                <div class="bg-cardBg rounded-2xl p-6 gold-border flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 rounded-md bg-gold/10 text-gold text-xs font-bold uppercase">Masterclass</span>
+                            <span class="text-xs text-gray-400">Complete Course</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">YouTube Automation & Faceless Mastery</h3>
+                        <p class="text-gray-400 text-xs mb-4">Learn step-by-step how to build faceless cashcow channels and generate passive income.</p>
+                        <ul class="space-y-2 text-xs text-gray-300 mb-6">
+                            <li><i class="fa-solid fa-check text-gold mr-2"></i> 40+ Video Modules</li>
+                            <li><i class="fa-solid fa-check text-gold mr-2"></i> AI Script & Voiceover Setup</li>
+                            <li><i class="fa-solid fa-check text-gold mr-2"></i> Algorithm & SEO Secrets</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="flex items-center justify-between mb-4 pt-4 border-t border-neutral-800">
+                            <div>
+                                <span class="text-xs text-gray-400 block">Regular Price: <span class="line-through">1,500 TK</span></span>
+                                <span class="text-2xl font-extrabold gold-gradient-text">599 TK</span>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-gold/10 text-gold text-xs font-bold">Best Seller</span>
+                        </div>
+                        <button onclick="openCheckout('YouTube Automation Course', '599 TK')" class="w-full py-3 rounded-xl gold-gradient-bg text-black font-bold text-sm shadow-lg shadow-gold/10 hover:opacity-90 transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-cart-shopping"></i> Enroll Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Checkout Modal with Interactive bKash / Nagad & Click-to-Copy -->
+    <div id="checkout-modal" class="fixed inset-0 z-50 hidden bg-black/85 backdrop-blur-md flex items-center justify-center p-4">
+        <div class="bg-cardBg border border-gold/50 rounded-3xl max-w-md w-full p-6 sm:p-8 relative shadow-2xl animate-in fade-in zoom-in duration-200">
+            <button onclick="closeCheckout()" class="absolute top-4 right-4 text-gray-400 hover:text-gold text-xl p-2">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="text-center mb-6">
+                <div class="w-14 h-14 rounded-full gold-gradient-bg gold-glow flex items-center justify-center text-black text-2xl font-bold mx-auto mb-3">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h3 class="text-xl font-bold text-white" id="modal-item-title">Order Product</h3>
+                <p class="text-gold font-extrabold text-2xl mt-1" id="modal-item-price">0 TK</p>
+            </div>
+
+            <!-- Payment Method Selector Tabs -->
+            <div class="grid grid-cols-2 gap-3 mb-4">
+                <!-- bKash Button -->
+                <button type="button" onclick="selectPaymentMethod('bkash')" id="btn-bkash" class="py-3 px-4 rounded-xl border-2 border-pink-600 bg-pink-950/40 text-pink-400 font-bold text-sm flex items-center justify-center gap-2 transition shadow-lg">
+                    <i class="fa-solid fa-wallet"></i> bKash (পિંক)
+                </button>
+                <!-- Nagad Button -->
+                <button type="button" onclick="selectPaymentMethod('nagad')" id="btn-nagad" class="py-3 px-4 rounded-xl border-2 border-neutral-700 bg-neutral-900 text-orange-400 font-bold text-sm flex items-center justify-center gap-2 transition shadow-lg">
+                    <i class="fa-solid fa-wallet"></i> Nagad (কমলা)
+                </button>
+            </div>
+
+            <!-- Payment Instructions Box (Changes style based on bKash/Nagad) -->
+            <div id="payment-box" class="rounded-2xl p-4 mb-6 text-xs space-y-2 border transition-all duration-300 bg-pink-950/20 border-pink-600/50 text-pink-200">
+                <p class="font-bold text-sm flex items-center gap-1 text-pink-400" id="payment-title">
+                    <i class="fa-solid fa-circle-info"></i> bKash Personal Payment
+                </p>
+                <p id="payment-desc">আমাদের bKash Personal নাম্বারে সেন্ড মানি (Send Money) করুন:</p>
+                
+                <!-- Click to Copy Number Box -->
+                <div onclick="copyPaymentNumber()" class="cursor-pointer bg-black/60 border border-pink-500/40 p-3 rounded-xl text-center group hover:border-pink-400 transition relative">
+                    <span class="text-gray-400 text-[10px] block uppercase tracking-wider">Click to Copy Number</span>
+                    <span class="font-mono text-lg font-extrabold text-pink-400 tracking-wider" id="payment-number">01609371023</span>
+                    <span class="absolute right-3 top-1/2 -translate-y-1/2 text-xs text-pink-400 group-hover:scale-110 transition"><i class="fa-regular fa-copy"></i></span>
+                </div>
+                <p class="text-[11px] text-gray-300" id="payment-note">টাকা পাঠানোর পর নিচের বক্সে আপনার তথ্য দিয়ে "Order Confirm" করুন। সরাসরি আমাদের WhatsApp এ চলে যাবে।</p>
+            </div>
+
+            <form onsubmit="handleOrderSubmit(event)" class="space-y-4">
+                <input type="hidden" id="selected-method" value="bkash">
+                <div>
+                    <label class="block text-xs font-semibold text-gray-300 mb-1">আপনার নাম (Your Name)</label>
+                    <input type="text" id="order-name" required class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-2.5 text-sm text-gray-100 focus:outline-none focus:border-gold" placeholder="Md. Rahim">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-300 mb-1">আপনার WhatsApp নম্বর (যে নাম্বারে ড্রাইভ লিংক চান)</label>
+                    <input type="text" id="order-whatsapp" required class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-2.5 text-sm text-gray-100 focus:outline-none focus:border-gold" placeholder="016xxxxxxxx">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-300 mb-1" id="trx-label">বিকাশ নম্বর ও TrxID (অথবা স্ক্রিনশট)</label>
+                    <input type="text" id="order-trx" required class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-2.5 text-sm text-gray-100 focus:outline-none focus:border-gold" placeholder="Bkash 016xx... & TrxID 9H8G...">
+                </div>
+                <button type="submit" class="w-full py-3.5 rounded-xl gold-gradient-bg text-black font-bold text-sm shadow-xl shadow-gold/20 hover:opacity-90 transition flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Order Confirm করুন (WhatsApp)
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Copy Notification Toast -->
+    <div id="copy-toast" class="fixed bottom-6 right-6 z-50 hidden bg-emerald-600 text-white px-4 py-2.5 rounded-xl shadow-2xl text-xs font-bold flex items-center gap-2 animate-bounce">
+        <i class="fa-solid fa-check-circle"></i> Number Copied to Clipboard!
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-cardBg border-t border-neutral-800 pt-16 pb-12 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+            <div class="space-y-4">
+                <div class="flex items-center space-x-3">
+                    <div class="w-9 h-9 rounded-full gold-gradient-bg gold-glow flex items-center justify-center text-black font-bold">
+                        <i class="fa-solid fa-bolt-lightning text-xs"></i>
+                    </div>
+                    <span class="text-xl font-extrabold gold-gradient-text">MIHAD BOOM VIDEO</span>
+                </div>
+                <p class="text-xs text-gray-400">
+                    Trusted platform for 100% viral YouTube Shorts bundles, cashcow long videos, and professional video editing courses in Bangladesh.
+                </p>
+                <div class="flex space-x-3 text-gold text-lg">
+                    <a href="https://wa.me/8801609371023" target="_blank" class="hover:scale-110 transition"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://t.me/your_telegram_username" target="_blank" class="hover:scale-110 transition"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="#" class="hover:scale-110 transition"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="hover:scale-110 transition"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-sm font-bold uppercase tracking-wider text-gold mb-4">Quick Links</h4>
+                <ul class="space-y-2 text-xs text-gray-400 font-medium">
+                    <li><a href="index.html" class="hover:text-gold transition">Home</a></li>
+                    <li><a href="demo.html" class="hover:text-gold transition">Demo Videos</a></li>
+                    <li><a href="free.html" class="hover:text-gold transition">Free Services & Resources</a></li>
+                    <li><a href="#boom-shorts-section" class="hover:text-gold transition">Boom Shorts Bundles</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-sm font-bold uppercase tracking-wider text-gold mb-4">Categories</h4>
+                <ul class="space-y-2 text-xs text-gray-400 font-medium">
+                    <li><a href="#boom-shorts-section" class="hover:text-gold transition">60 Pcs Boom Shorts Video</a></li>
+                    <li><a href="#boom-shorts-section" class="hover:text-gold transition">40 Pcs Boom Shorts Video</a></li>
+                    <li><a href="#boom-shorts-section" class="hover:text-gold transition">30 Pcs & 15 Pcs Shorts</a></li>
+                    <li><a href="#video-bundle-section" class="hover:text-gold transition">Video Bundles & Long Form</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-sm font-bold uppercase tracking-wider text-gold mb-4">Support & Contact</h4>
+                <ul class="space-y-2 text-xs text-gray-400">
+                    <li><i class="fa-brands fa-whatsapp text-gold mr-2"></i> +880 1609-371023 (WhatsApp)</li>
+                    <li><i class="fa-solid fa-wallet text-gold mr-2"></i> bKash: 01609371023</li>
+                    <li><i class="fa-solid fa-wallet text-gold mr-2"></i> Nagad: 01757246416</li>
+                    <li><i class="fa-solid fa-clock text-gold mr-2"></i> Support: 24/7 Available</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-neutral-800 text-center text-xs text-gray-500">
+            <p>&copy; 2026 MIHAD BOOM VIDEO. All rights reserved. Built for GitHub Pages.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Checkout Modal Functions
+        let currentItemTitle = '';
+        let currentItemPrice = '';
+
+        function openCheckout(title, price) {
+            currentItemTitle = title;
+            currentItemPrice = price;
+            document.getElementById('modal-item-title').innerText = title;
+            document.getElementById('modal-item-price').innerText = price;
+            document.getElementById('checkout-modal').classList.remove('hidden');
+            selectPaymentMethod('bkash'); // Default to bKash
+        }
+
+        function closeCheckout() {
+            document.getElementById('checkout-modal').classList.add('hidden');
+        }
+
+        // Payment Method Switcher (bKash pink / Nagad orange)
+        function selectPaymentMethod(method) {
+            const btnBkash = document.getElementById('btn-bkash');
+            const btnNagad = document.getElementById('btn-nagad');
+            const paymentBox = document.getElementById('payment-box');
+            const paymentTitle = document.getElementById('payment-title');
+            const paymentDesc = document.getElementById('payment-desc');
+            const paymentNumber = document.getElementById('payment-number');
+            const paymentNote = document.getElementById('payment-note');
+            const selectedMethodInput = document.getElementById('selected-method');
+            const trxLabel = document.getElementById('trx-label');
+
+            selectedMethodInput.value = method;
+
+            if(method === 'bkash') {
+                // bKash styling (Pink / Magenta style)
+                btnBkash.className = "py-3 px-4 rounded-xl border-2 border-pink-600 bg-pink-950/40 text-pink-400 font-bold text-sm flex items-center justify-center gap-2 transition shadow-lg";
+                btnNagad.className = "py-3 px-4 rounded-xl border-2 border-neutral-800 bg-neutral-900 text-gray-400 font-bold text-sm flex items-center justify-center gap-2 transition shadow-lg";
+                
+                paymentBox.className = "rounded-2xl p-4 mb-6 text-xs space-y-2 border transition-all duration-300 bg-pink-950/20 border-pink-600/50 text-pink-200";
+                paymentTitle.innerHTML = '<i class="fa-solid fa-circle-info"></i> bKash Personal Payment';
+                paymentTitle.className = "font-bold text-sm flex items-center gap-1 text-pink-400";
+                paymentDesc.innerText = "আমাদের bKash Personal নাম্বারে সেন্ড মানি (Send Money) করুন:";
+                paymentNumber.innerText = "01609371023";
+                paymentNumber.className = "font-mono text-lg font-extrabold text-pink-400 tracking-wider";
+                trxLabel.innerText = "বিকাশ নম্বর ও TrxID (অথবা স্ক্রিনশট)";
+            } else {
+                // Nagad styling (Orange style)
+                btnNagad.className = "py-3 px-4 rounded-xl border-2 border-orange-500 bg-orange-950/40 text-orange-400 font-bold text-sm flex items-center justify-center gap-2 transition shadow-lg";
+                btnBkash.className = "py-3 px-4 rounded-xl border-2 border-neutral-800 bg-neutral-900 text-gray-400 font-bold text-sm flex items-center justify-center gap-2 transition shadow-lg";
+                
+                paymentBox.className = "rounded-2xl p-4 mb-6 text-xs space-y-2 border transition-all duration-300 bg-orange-950/20 border-orange-500/50 text-orange-200";
+                paymentTitle.innerHTML = '<i class="fa-solid fa-circle-info"></i> Nagad Personal Payment';
+                paymentTitle.className = "font-bold text-sm flex items-center gap-1 text-orange-400";
+                paymentDesc.innerText = "আমাদের Nagad Personal নাম্বারে সেন্ড মানি (Send Money) করুন:";
+                paymentNumber.innerText = "01757246416";
+                paymentNumber.className = "font-mono text-lg font-extrabold text-orange-400 tracking-wider";
+                trxLabel.innerText = "নগদ নম্বর ও TrxID (অথবা স্ক্রিনশট)";
+            }
+        }
+
+        // Click to Copy Number Function
+        function copyPaymentNumber() {
+            const num = document.getElementById('payment-number').innerText;
+            navigator.clipboard.writeText(num).then(() => {
+                const toast = document.getElementById('copy-toast');
+                toast.classList.remove('hidden');
+                setTimeout(() => {
+                    toast.classList.add('hidden');
+                }, 2000);
+            });
+        }
+
+        // Handle Order Submit -> Redirect to WhatsApp with order details
+        function handleOrderSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('order-name').value;
+            const whatsapp = document.getElementById('order-whatsapp').value;
+            const trx = document.getElementById('order-trx').value;
+            const method = document.getElementById('selected-method').value.toUpperCase();
+
+            const message = `*🔥 NEW ORDER - MIHAD BOOM VIDEO 🔥*%0A%0A*Product:* ${currentItemTitle}%0A*Price:* ${currentItemPrice}%0A*Payment Method:* ${method}%0A*Customer Name:* ${name}%0A*Customer WhatsApp:* ${whatsapp}%0A*TrxID / Sender Info:* ${trx}%0A%0APlease verify payment and send Google Drive link!`;
+
+            const adminWhatsApp = "8801609371023";
+            const whatsappUrl = `https://wa.me/${adminWhatsApp}?text=${message}`;
+
+            closeCheckout();
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
